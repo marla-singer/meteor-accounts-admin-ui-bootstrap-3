@@ -5,7 +5,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-  api.versionsFrom("METEOR@1.1.0");
+  api.versionsFrom("1.1.0");
 	api.use('standard-app-packages', ['client', 'server']);
 	api.use("alanning:roles@1.2.11", ['client', 'server']);
 
