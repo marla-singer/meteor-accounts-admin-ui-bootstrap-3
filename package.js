@@ -1,11 +1,12 @@
 Package.describe({
 	summary: "A roles based account management system using bootstrap 3",
   version: "0.2.7",
+	name: "brylie:accounts-admin-ui",
   git: "https://github.com/brylie/meteor-accounts-admin-ui-bootstrap-3.git"
 });
 
 Package.on_use(function (api, where) {
-  api.versionsFrom("1.1.0");
+  api.versionsFrom("1.0.1");
 	api.use('standard-app-packages', ['client', 'server']);
 	api.use("alanning:roles@1.2.11", ['client', 'server']);
 
