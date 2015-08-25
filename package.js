@@ -9,6 +9,7 @@ Package.on_use(function (api, where) {
   api.versionsFrom("1.0.1");
 	api.use('standard-app-packages', ['client', 'server']);
 	api.use("alanning:roles@1.2.11", ['client', 'server']);
+	api.use("brylie:first-admin@0.1.0", ['server']);
 
 	api.add_files('libs/user_query.js', ['client', 'server']);
 
