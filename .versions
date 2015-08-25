@@ -6,7 +6,8 @@ binary-heap@1.0.3
 blaze@2.1.2
 blaze-tools@1.0.3
 boilerplate-generator@1.0.3
-brylie:accounts-admin-ui@0.2.7
+brylie:accounts-admin-ui@0.2.8
+brylie:first-admin@0.1.0
 callback-hook@1.0.3
 check@1.0.5
 ddp@1.1.0
