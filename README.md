@@ -14,7 +14,7 @@ A roles based account management system using bootstrap 3 for Meteor.
 
 - ~~Implement UI to create/remove roles (currently done at Meteor.startup)~~ DONE
 - Configurable fields
-- ~~Implement pagination ~~ DONE
+- ~~Implement pagination~~ DONE
 - Write tests
 - User impersonation (for admins)
 
@@ -95,7 +95,7 @@ $ meteor remove insecure
   </div>
 </template>
 ```
-
+Use `recordsPerPage=10` in `accountsAdmin` template to set limit of records on page.
 After you edit app-name.html you need to sign in with a new user. The first user will automatically be added as an admin.
 
 ## Iron Router Integration
