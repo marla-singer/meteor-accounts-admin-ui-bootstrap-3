@@ -13,35 +13,49 @@
     <table class='table table-striped'>
         <thead>
             <tr>
-                <th></th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Roles</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             {{#each users}}
                 <tr class="{{#if myself _id}}info{{/if}}">
                     <td>
-                        {{#unless myself _id}}
-                            <span data-toggle="modal" href="#deleteaccount" class="glyphicon glyphicon-trash clickable"></span>
-                            <span data-toggle="modal" href="#updateaccount" class="glyphicon glyphicon-pencil clickable"></span>
-                            <span data-toggle="modal" href="#infoaccount" class="glyphicon glyphicon-info-sign clickable"></span>
-                        {{/unless}}
-                    </td>
-                    <td>
-                        {{#if profile.name}}
-                            {{profile.name}}
+                        {{#if username}}
+                            {{username}}
                         {{else}}
                             {{email}}
                         {{/if}}
                     </td>
                     <td>{{email}}</td>
                     <td>{{roles}}</td>
+                    <td>
+                      {{#unless myself _id}}
+                        <span data-toggle="modal" href="#deleteaccount" class="glyphicon glyphicon-trash clickable"></span>
+                        <span data-toggle="modal" href="#updateaccount" class="glyphicon glyphicon-pencil clickable"></span>
+                        <span data-toggle="modal" href="#infoaccount" class="glyphicon glyphicon-info-sign clickable"></span>
+                      {{/unless}}
+                    </td>
                 </tr>
             {{/each}}
         </tbody>
     </table>
+  <div class="form-inline">
+    <span class="items-on-page">
+      Showing
+      <strong>
+        {{currentItems}}
+      </strong>
+      of
+      <strong>
+        {{totalItems}}
+      </strong>
+      users
+    </span>
+    {{> defaultBootstrapPaginator pagination=templatePagination limit=10 containerClass="pull-right"}}
+  </div>
     {{> updateRolesModal}}
     {{> deleteAccountModal}}
     {{> infoAccountModal}}
