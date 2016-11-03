@@ -5,3 +5,5 @@ Meteor.publish('roles', function (){
 Meteor.publish('filteredUsers', function(filter) {
 	return filteredUserQuery(this.userId, filter);
 });
+
+new Meteor.Pagination(Meteor.users);
