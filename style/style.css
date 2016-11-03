@@ -16,3 +16,14 @@
 .clickable {
 	cursor: pointer;
 }
+
+.items-on-page {
+	vertical-align: middle;
+	float: left;
+	line-height: 2em;
+}
+
+.pagination {
+	margin-top: 0;
+	margin-bottom: 0;
+}
