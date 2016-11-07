@@ -95,7 +95,7 @@ Meteor.methods({
 		if (!user || !Roles.userIsInRole(user, ['admin']))
 			throw new Meteor.Error(401, "You need to be an admin to update a user.");
 
-		if (property !== 'profile.name')
+		if (property !== 'username')
 			throw new Meteor.Error(422, "Only 'name' is supported.");
 
 		obj = {};
